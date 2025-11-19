@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "6720f133-cdc6-4da8-bca1-e2aa6af29f4d",
+		"name": "SecureTaskManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49715349",
+		"_collection_link": "https://eastwmat-6757794.postman.co/workspace/Matthew's-Workspace~b8bc030d-ee14-4898-8b89-1d2632d8ceb7/collection/49715349-6720f133-cdc6-4da8-bca1-e2aa6af29f4d?action=share&source=collection_link&creator=49715349"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\": \"TheDragonMuncher\",\r\n    \"Email\": \"eastwmat@sheridancollege.ca\",\r\n    \"FirstName\": \"Matthew\",\r\n    \"LastName\": \"Eastwood\",\r\n    \"Password\": \"H@ck3rM@n!\",\r\n    \"ConfirmPassword\": \"H@ck3rM@n!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5200/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"TheDragonMuncher\",\r\n    \"Email\": \"eastwmat@sheridancollege.ca\",\r\n    \"FirstName\": \"Matthew\",\r\n    \"LastName\": \"Eastwood\",\r\n    \"Password\": \"H@ck3rM@n!\",\r\n    \"ConfirmPassword\": \"H@ck3rM@n!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Nov 2025 18:19:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"token\": null,\n    \"userId\": \"29caf467-f01f-48cd-ae48-defb2ba87c5e\",\n    \"email\": \"eastwmat@sheridancollege.ca\",\n    \"userName\": \"TheDragonMuncher\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"eastwmat@sheridancollege.ca\",\r\n\"password\": \"H@ck3rM@n!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5200/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "5200",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\": \"eastwmat@sheridancollege.ca\",\r\n\"password\": \"H@ck3rM@n!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5200/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Nov 2025 18:20:36 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjI5Y2FmNDY3LWYwMWYtNDhjZC1hZTQ4LWRlZmIyYmE4N2M1ZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUaGVEcmFnb25NdW5jaGVyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiZWFzdHdtYXRAc2hlcmlkYW5jb2xsZWdlLmNhIiwianRpIjoiMWQ3OGUyMjAtMzQ4ZC00Mzg4LTk5NTQtNmU0NDJiM2E0Zjg0IiwiZXhwIjoxNzYzNTgwMDM2LCJpc3MiOiJJZGVudGl0eU1hbmFnZW1lbnRBUEkiLCJhdWQiOiJJZGVudGl0eU1hbmFnZW1lbnRDbGllbnQifQ.PQETK47-qwDYgYzC-lejeQ9RyckqnGiz_CFkioqqFT8\",\n    \"userId\": \"29caf467-f01f-48cd-ae48-defb2ba87c5e\",\n    \"email\": \"eastwmat@sheridancollege.ca\",\n    \"userName\": \"TheDragonMuncher\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CreateTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjI5Y2FmNDY3LWYwMWYtNDhjZC1hZTQ4LWRlZmIyYmE4N2M1ZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUaGVEcmFnb25NdW5jaGVyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiZWFzdHdtYXRAc2hlcmlkYW5jb2xsZWdlLmNhIiwianRpIjoiMWQ3OGUyMjAtMzQ4ZC00Mzg4LTk5NTQtNmU0NDJiM2E0Zjg0IiwiZXhwIjoxNzYzNTgwMDM2LCJpc3MiOiJJZGVudGl0eU1hbmFnZW1lbnRBUEkiLCJhdWQiOiJJZGVudGl0eU1hbmFnZW1lbnRDbGllbnQifQ.PQETK47-qwDYgYzC-lejeQ9RyckqnGiz_CFkioqqFT8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \"Important\",\r\n    \"Description\": \"Do your taxes stupid\",\r\n    \"Status\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CreateTask",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Title\": \"Important\",\r\n    \"Description\": \"Do your taxes stupid\",\r\n    \"Status\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Nov 2025 18:24:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:5000/api/Tasks/1"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Important\",\n    \"description\": \"Do your taxes stupid\",\n    \"status\": 0,\n    \"dueDate\": null,\n    \"createdAt\": \"2025-11-19T18:24:29.5876974Z\",\n    \"updatedAt\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "GetAllTasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjI5Y2FmNDY3LWYwMWYtNDhjZC1hZTQ4LWRlZmIyYmE4N2M1ZSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUaGVEcmFnb25NdW5jaGVyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiZWFzdHdtYXRAc2hlcmlkYW5jb2xsZWdlLmNhIiwianRpIjoiMWQ3OGUyMjAtMzQ4ZC00Mzg4LTk5NTQtNmU0NDJiM2E0Zjg0IiwiZXhwIjoxNzYzNTgwMDM2LCJpc3MiOiJJZGVudGl0eU1hbmFnZW1lbnRBUEkiLCJhdWQiOiJJZGVudGl0eU1hbmFnZW1lbnRDbGllbnQifQ.PQETK47-qwDYgYzC-lejeQ9RyckqnGiz_CFkioqqFT8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "152"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Nov 2025 18:24:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Important\",\n        \"description\": \"Do your taxes stupid\",\n        \"status\": 0,\n        \"dueDate\": null,\n        \"createdAt\": \"2025-11-19T18:24:29.5876974\",\n        \"updatedAt\": null\n    }\n]"
+				}
+			]
+		}
+	]
+}
